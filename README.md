@@ -1,142 +1,100 @@
-# SGK Labor Market Analysis – Excel Dashboard
-
-This project analyzes labor market data from SGK quarterly reports using Microsoft Excel.
-The main goal of the project is to examine open job demand, demanded skills, sector-based employment expectations, and labor market trends by quarter.
-
-## Project Overview
-
-In this project, quarterly SGK labor market reports were collected, organized, and transformed into a structured Excel dashboard.
-
-The dashboard focuses on:
-
-- Open job demand
-- Demanded skills in the labor market
-- Sector-based employment expectations
-- Quarter-based labor market changes
-- KPI-based summary analysis
-
-This project was created as a portfolio project for data analysis and reporting.
-
+# SGK Labor Market Analysis
+This project analyzes SGK labor market data using Excel, Power Query and SQL Server.
+The project includes an Excel dashboard and SQL analysis queries focused on employment, open jobs, sector trends, employment expectations, production/service expectations and occupation skill indicators.
+---
 ## Tools Used
-
-- Microsoft Excel
+- Excel
 - Power Query
 - Pivot Tables
-- Pivot Charts
-- Slicers
-- VBA Macro Buttons
-- GitHub
-
-## Dataset
-
-The dataset was prepared from SGK quarterly labor market reports.
-
-Used reports:
-
-- 2025 Q1
-- 2025 Q2
-- 2025 Q3
-- 2025 Q4
-- 2026 Q1
-
-The original report files are stored in the `data` folder.
-
-## Dashboard Features
-
-The Excel dashboard includes:
-
-- KPI cards
-- Quarter-based filtering
-- Sector-based analysis
-- Open job analysis
-- Demanded skills analysis
-- Employment expectation analysis
-- Interactive slicers
-- Dashboard navigation with macro buttons
-- Visual summary charts
-
+- SQL Server
+- SQL Server Management Studio
+- Git & GitHub
+---
 ## Project Structure
-
 ```text
-sgk-labor-market-analysis/
+sgk-labor-market-analysis
 │
-├── data/
-│   ├── 1-çeyrek-sonuç-raporu.pdf
-│   ├── 2025-2-çeyrek-sonuç-raporu.pdf
-│   ├── 3çeyrek-sonuç-raporu.pdf
-│   ├── 4-çeyrek-sonuç-raporu.pdf
-│   └── 2026-1-çeyrek-sonuç-raporu.pdf
+├── data
+│   └── Quarterly SGK reports
 │
-├── excel/
-│   ├── sgk_labor_market_excel_dashboard.xlsm
-│   │
-│   ├── images/
-│   │   └── dashboard screenshots
-│   │
-│   └── video/
-│       └── dashboard demo video
+├── excel
+│   ├── images
+│   ├── video
+│   └── sgk_labor_market_excel_dashboard.xlsx
+│
+├── sql
+│   ├── relationship_table
+│   ├── 01_create_tables.sql
+│   └── 02_analysis_queries.sql
 │
 └── README.md
 ```
+---
+## Excel Dashboard
+The Excel dashboard was created using Power Query and Pivot Tables.
+It includes:
+- Employee count analysis
+- Open job count analysis
+- Open job rate analysis
+- Sector-based comparison
+- Quarterly labor market indicators
+![Excel Dashboard](excel/images/dashboard-main.png)
+[Watch Dashboard Demo](excel/video/dashboard-demo.mp4)
+---
+## SQL Analysis
+The SQL part includes database modeling and analysis queries.
+Main tables:
+- `PERIODS`
+- `SECTORS`
+- `QUARTERLY_CORE_METRICS`
+- `EMPLOYMENT_EXPECTATIONS`
+- `PRODUCTION_EXPECTATIONS`
+- `OCCUPATION_SKILL_ANALYSIS`
+![SQL Relationship Diagram](sql/relationship_table/relationship_table.png)
+---
+## SQL Analysis Topics
+The SQL queries cover:
+- Sector count by period
+- Duplicate record check
+- Total record count by table
+- Top sectors by open job count
+- Top sectors by open job rate
+- Employee count change by period
+- Open job count change by period
+- Employment expectation analysis
+- Production/service expectation analysis
+- Employment vs production expectation comparison
+- Occupation skill analysis
+---
+## Key SQL Concepts Used
 
-## Dashboard Preview
-
-Dashboard screenshots are available in the `excel/images` folder.
-
-## Demo Video
-
-A demo video of the Excel dashboard is available in the `excel/video` folder.
-
-## Analysis Focus
-
-This dashboard was designed to answer questions such as:
-
-- Which sectors have the highest open job demand?
-- Which skills are most demanded in the labor market?
-- How do employment expectations change by sector?
-- How does labor market demand change across quarters?
-- Which areas show stronger labor demand?
-
-## What I Practiced
-
-During this project, I practiced:
-
-- Collecting data from official reports
-- Organizing raw report data
-- Cleaning and preparing data in Excel
-- Using Power Query for data preparation
-- Creating Pivot Tables
-- Building Pivot Charts
-- Designing KPI cards
-- Creating an interactive Excel dashboard
-- Using slicers for filtering
-- Using macro buttons for dashboard navigation
-- Structuring a data analysis project on GitHub
-
-## Key Skills Demonstrated
-
-- Data Cleaning
-- Data Preparation
-- Excel Dashboard Design
-- Pivot Table Analysis
-- Power Query
-- Data Visualization
-- Labor Market Analysis
-- Reporting
-- Portfolio Project Documentation
-
-## About This Project
-
-This project demonstrates my ability to turn raw report-based data into a structured and interactive Excel dashboard.
-
-It shows the full process of a basic data analysis project:
-
+- `JOIN`
+- `GROUP BY`
+- `HAVING`
+- `COUNT`
+- `COUNT DISTINCT`
+- `SUM`
+- `AVG`
+- `ABS`
+- `ORDER BY`
+- `TOP`
+- Primary Key / Foreign Key relationships
+---
+## Project Status
+Completed:
+- Excel dashboard
+- SQL database schema
+- SQL relationship model
+- SQL analysis queries
+In progress:
+- Power BI report
+---
+## Goal
+The goal of this project is to demonstrate an end-to-end data analysis workflow:
 ```text
-Raw Reports → Data Preparation → Analysis → Dashboard → Presentation
+Raw Reports → Excel / Power Query → SQL Server → SQL Analysis → Dashboard
 ```
-
-## About Me
-
-I am a Junior Data Analyst candidate focused on Excel, SQL, Power BI, and data reporting.
-
-I build portfolio projects to improve my skills in data analysis, dashboard design, SQL-based analysis, and business intelligence reporting.
+This project was created as a portfolio project for junior data analyst and reporting roles.
+---
+## Author
+**Emre Erol**
