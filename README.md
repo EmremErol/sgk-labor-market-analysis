@@ -38,7 +38,7 @@ It includes:
 - Open job rate analysis
 - Sector-based comparison
 - Quarterly labor market indicators
-![Watch Dashboard Demo](excel/video/dashboard-demo.mp4)
+[Watch Dashboard Demo](excel/video/dashboard-demo.mp4)
 ---
 ## SQL Analysis
 The SQL part includes database modeling and analysis queries.
