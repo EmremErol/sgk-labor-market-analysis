@@ -1,6 +1,6 @@
 # SGK Labor Market Analysis
-This project analyzes SGK labor market data using Excel, Power Query and SQL Server.
-The project includes an Excel dashboard and SQL analysis queries focused on employment, open jobs, sector trends, employment expectations, production/service expectations and occupation skill indicators.
+This project analyzes SGK labor market data using Excel, Power Query, SQL Server and Power BI.
+The project includes an end-to-end data analysis workflow covering data preparation, Excel dashboard creation, SQL database modeling, SQL analysis queries and Power BI reporting.
 ---
 ## Tools Used
 - Excel
@@ -8,6 +8,8 @@ The project includes an Excel dashboard and SQL analysis queries focused on empl
 - Pivot Tables
 - SQL Server
 - SQL Server Management Studio
+- Power BI
+- DAX Measures
 - Git & GitHub
 ---
 ## Project Structure
@@ -27,6 +29,11 @@ sgk-labor-market-analysis
 │   ├── 01_create_tables.sql
 │   └── 02_analysis_queries.sql
 │
+├── powerbi
+│   ├── image
+│   │   └── powerbi-dashboard.png
+│   └── SGK_Labor_Market_Analysis_Dashboard.pbix
+│
 └── README.md
 ```
 ---
@@ -38,18 +45,18 @@ It includes:
 - Open job rate analysis
 - Sector-based comparison
 - Quarterly labor market indicators
-[Watch Dashboard Demo](excel/video/dashboard-demo.mp4)
+- Interactive filtering structure
+The Excel part was used as the first dashboard and data preparation stage of the project.
 ---
 ## SQL Analysis
 The SQL part includes database modeling and analysis queries.
 Main tables:
-- `PERIODS`
-- `SECTORS`
-- `QUARTERLY_CORE_METRICS`
-- `EMPLOYMENT_EXPECTATIONS`
-- `PRODUCTION_EXPECTATIONS`
-- `OCCUPATION_SKILL_ANALYSIS`
-![SQL Relationship Diagram](sql/relationship_table/relationship_table.png)
+- PERIODS
+- SECTORS
+- QUARTERLY_CORE_METRICS
+- EMPLOYMENT_EXPECTATIONS
+- PRODUCTION_EXPECTATIONS
+- OCCUPATION_SKILL_ANALYSIS
 ---
 ## SQL Analysis Topics
 The SQL queries cover:
@@ -66,18 +73,42 @@ The SQL queries cover:
 - Occupation skill analysis
 ---
 ## Key SQL Concepts Used
-
-- `JOIN`
-- `GROUP BY`
-- `HAVING`
-- `COUNT`
-- `COUNT DISTINCT`
-- `SUM`
-- `AVG`
-- `ABS`
-- `ORDER BY`
-- `TOP`
+- JOIN
+- GROUP BY
+- HAVING
+- COUNT
+- COUNT DISTINCT
+- SUM
+- AVG
+- ABS
+- ORDER BY
+- TOP
 - Primary Key / Foreign Key relationships
+---
+## Power BI Dashboard
+The Power BI dashboard was created by connecting the SQL Server database to Power BI.
+This stage converts the modeled SQL data into an interactive reporting dashboard.
+The dashboard includes:
+- Total employee count
+- Total open job count
+- Open job rate
+- Highest open job sector
+- Highest open job count
+- Employee count by quarter
+- Sector filter
+- Quarter filter
+---
+## Power BI Features Used
+- SQL Server data connection
+- Data model relationships
+- DAX measures
+- KPI cards
+- Slicer filters
+- Column chart
+- Dynamic sector-based calculation
+---
+## Dashboard Preview
+![Power BI Dashboard](powerbi/image/powerbi-dashboard.png)
 ---
 ## Project Status
 Completed:
@@ -85,15 +116,14 @@ Completed:
 - SQL database schema
 - SQL relationship model
 - SQL analysis queries
-In progress:
-- Power BI report
+- Power BI dashboard
 ---
 ## Goal
 The goal of this project is to demonstrate an end-to-end data analysis workflow:
 ```text
-Raw Reports → Excel / Power Query → SQL Server → SQL Analysis → Dashboard
+Raw Reports → Excel / Power Query → SQL Server → SQL Analysis → Power BI Dashboard
 ```
 This project was created as a portfolio project for junior data analyst and reporting roles.
 ---
 ## Author
-**Emre Erol**
+Emre Erol
